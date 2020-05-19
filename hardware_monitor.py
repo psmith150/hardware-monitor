@@ -4,7 +4,8 @@ HARDWARE_POLL_INTERVAL = 10 # Seconds between polling of hardware
 MQTT_TOPIC_PREFIX = 'app_server/hardware/' # MQTT topic to use as prefix
 MQTT_HOST = '192.168.1.10' # MQTT host
 MQTT_KEEP_ALIVE = 60 # Keep alive time
-LOG_PATH = 'logs\\'
+#LOG_PATH = 'logs\\' # Windows
+LOG_PATH = 'logs/' # Linux
 
 def on_connect(client, userdata, flags, rc):
     client.publish(MQTT_TOPIC_PREFIX + "available", "online")
